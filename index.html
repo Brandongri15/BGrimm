@@ -5,17 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="#">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
     <link href="https://fonts.googleapis.com/css?family=Baloo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/main.css">
-
-    <title>About Me</title>
+    <link rel="stylesheet" href="home.css">
+    <title>Brandon Grimm</title>
 </head>
 <body>
-     <!--NAVIGATION AND MY NAME-->
-     <div  class="logo">
+    <!--Navigation & surname-->
+    <div  class="logo">
         <a href="Home.html">
            <img  src="Image/GRIMM.svg" alt="Surname logo">
          </a>
@@ -28,193 +24,127 @@
             </ul>
         </nav>
        </div>
-       <!--A picture of me and main heading-->
-       <section>
-       <div class="intro">
-            <img id class="Me" src="image/ME.svg">
-            <div class="UX">
-                 <h1>Junior UX Designer <span class="Bold">in the Netherlands</span></h1>
-            
-            <div class="text-block">
-                 <p>Looking for an Internship</p>
-                 
-                </div>
+    <!--Name and Bitmoji-->
+    <section>
+        <div class="emoji"><img src="Image/Bit moji.svg"></div>
+        <div class="introduction">
+        <h1>HEY!</h1>
+        <h2><span class="grey">My name is </span>Brandon Grimm</h2>
+        <h2><span class="grey">Yes like the </span>Brother Grimm's</h2>
+</div>
+</section>
+
+<section>
+    <div class="wire"><img src="Image/Junior Background.svg" width="100%"></div>
+    <div class="ux-junior">
+        <h2><span class="grey">I am a </span>Junior UX Designer</h2>
+        <h2><span class="grey">fascinated by</span></h2>
+        <h2>Interaction Design & UX Research</h2>
+        </div>
+</section>
+<main>
+    <section>
+        <div class="container">
+            <div class="portfolio-item n1">
+              <div class="portfolio-img">
+                <img src="Image/project/Resize/birme (2)/complete.jpg">
+                <img src="Image/project/Resize/birme (2)/day4.png">
+                <img src="Image/project/Resize/birme (2)/IMG_2679.JPG">
+              </div>
+              <div class="portfolio-title"> 
+                  <a href="index.html">Hallmark</div></a>
             </div>
-       </div>
-      </section>
-      
-       
-       <main>
-           <section>
-            <div class="mid">
-                <h1 id class="About">About Me</h1>
-           <p class="text1">
-               My name is Brandon Grimm as you have probably identified by now.
-               I was born and raised in a beautiful diverse country called 
-               Namibia. Currently I am studying at The Hague University of Applied 
-               Sciences undertaking the major User  Experience Design. I am 
-               currently looking to expand my knowledge as a Junior UX Designer 
-               within an Internship role.</p>
-    
-               <br>
-    
-               <p class="text">I have had a deep fascination
-               towards the interaction between a person and a piece of technology. 
-               Understanding the user, is crucial part of UX and this is what led 
-               my passion for UX as from a young age I was fascinated watching my
-               dad playing video games seeing the different techniques used to 
-               create a more immersive world.</p>
+            <div class="portfolio-item n2">
+                <div class="portfolio-img">
+                  <img src="Image/project/Resize/birme (2)/ezgif.com-crop (1).gif" autoplay loop muted></img>
+                  <img src="Image/project/Resize/birme (2)/curve-004.png"/>
+                  
+                </div>
+                <div class="portfolio-title">
+                    <a href=index.html>Processing</div></a> 
+              </div>
+              
+    </section>
+</main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+
+            <h3><span class="Grimm"> <img src="Image/GRIMM.svg"></h3>
+
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·
+                <a href="about.html">About</a>
+                ·
+                <a href="try work.html">Projects</a>
+                ·
+                <a href="Image/Brandon  Resume.pdf" download="Brandon Resume"> Resume</a>
+            </p>
+
+            <p class="footer-company-name">Made by Brandon Grimm</p>
+
+            <div class="footer-icons">
+
+                <a href="https://www.facebook.com/profile.php?id=100000158137723"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com/brandongr00/"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/brandon-grimm-bb9778161/"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/Brandongri15"><i class="fa fa-github"></i></a>
                
-                <br>
+
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            
+
+            <form action="mailto:brandon1506@gmail.com" method="post">
+
+               
+                <button>Email Me</button>
+
+                
+            </form>
+
+        </div>
+
+    </footer>
+    <script>
+    let interval = null
+
+    function startRotating(containerEl) {
+      const items = containerEl.querySelectorAll('.portfolio-img img, .portfolio-img video')
+      if (items.length === 1) {
+        return false
+      }
+      let currentIndex = items.length - 1
+      interval = setInterval(function() {
+        const nextIndex = currentIndex-1 < 0 ? items.length - 1 : currentIndex - 1
+        items[nextIndex].style.opacity = "1"
+        items[currentIndex].style.opacity = "0"
+        currentIndex -= 1
+        if (currentIndex < 0) {
+          currentIndex = items.length - 1
+        }
+      }, 750)
+    }
     
-               <p class="text">This shaped my desire to be involved 
-               with something that creates an meaningful experience, an experience 
-               shaped by the user and his needs. I always shared a this passion to 
-               help others, to explain in a way that that individual would understand.
-               I find it extremely gratifying to see people grasp the concept  of a 
-               product without much explanation.</p>
-              </div>
-        </section>
-       
-       <section>
-        <img src="Image/Line 1.svg" width="100%">
-       </section>
-        <!--Pictures--> 
-        <section>
-            
-            <div class="gallery-section">
-                <div class="inner-width">
-                  <h2>Me in a few pictures</h2>
-                  <div class="border"></div>
-                  <div class="gallery">
-          
-                    <a href="Image/canal.jpg" class="image">
-                      <img src="Image/Resize/canal.jpg" alt="Den Haag Central">
-                      
-                    </a>
-          
-                    <a href="Image/Hayden.jpg" class="image">
-                      <img src="Image/Resize/Hayden.jpg" alt="My Brother">
-                    </a>
-          
-                    <a href="Image/Mini-golf.jpg" class="image">
-                      <img src="Image/Resize/Mini-golf.jpg" alt="Me playing mini golf">
-                    </a>
-          
-                    <a href="Image/sunset.jpg" class="image">
-                      <img src="Image/Resize/sunset.jpg" alt="Onab Dam sunset">
-                    </a>
-          
-                    <a href="Image/Beach.jpeg" class="image">
-                      <img src="Image/Resize/Beach.jpeg" alt="Dragon Drawing">
-                      
-                    </a>
-          
-                    <a href="Image/roco mama.jpg" class="image">
-                      <img src="Image/Resize/roco mama.jpg" alt="">
-                    </a>
-          
-                    <a href="Image/wheel.jpeg" class="image">
-                      <img src="Image/Resize/wheel.jpeg" alt="">
-                    </a>
-          
-                    <a href="Image/Dragon.jpg" class="image">
-                      <img src="Image/Resize/Dragon.jpg" alt="">
-                    </a>
-          
-                  </div>
-                </div>
-              </div>
-      </section>
-      <!--Education-->
-      <section class="education-dire">
-        <h2 class="title">Education</h2> 
-        <div class="row">
-            <div class="column">
-                <time class="timestamp">Class of 2022</time>
-                <h3>User Experience Design <small class="small">English Stream</small></h3>
-                <h4>Bachelor of Sciences (BSc)</h4>
-                <p class="small">Faculty of IT &amp; Design</p>
-                <p class="small">The Hague University of Applied Sciences</p>
-                </div>
-                <div class="column1">
-                    <time class="timestamp">Class of 2018</time>
-                    <h3>Abitur <small class="small">Bilingual gymnasium </small></h3>
-                    <p class="small">Windhoek,Namibia</p>
-                    <p class="small">Deutsche Höhere Privat Schule</p>
-                    </div>
-                </section>
-                <section>
-                    <div  class="bottom">
-                        <h1 class="skills">Skills</h1>
-                        <div class="listed">
-                                <span  class="Grimm__3"><h2>User Research</h2>
-                                <h3>Interaction Design</h3>
-                                <h4>Design Thinking (IDEO)</h4>
-                                <h4>English (Native), German  (Native)</h4>
-                                <h4>Figma</h4>
-                                <h4>Adobe XD</h4>
-                                <h4>HTML/CSS</h4>
-                                <h4>Marvel</h4></span>
-                            </li>
-                        </ul>
-                    </section>
-                    </div>
-                </section> 
-                <footer class="footer-distributed">
-
-                    <div class="footer-left">
-            
-                        <h3><span class="Grimm"> <img src="Image/GRIMM.svg"></h3>
-            
-                        <p class="footer-links">
-                            <a href="index.html">Home</a>
-                            ·
-                            <a href="about.html">About</a>
-                            ·
-                            <a href="try work.html">Projects</a>
-                            ·
-                            <a href="Image/Brandon  Resume.pdf" download="Brandon Resume"> Resume</a>
-                        </p>
-            
-                        <p class="footer-company-name">Made by Brandon Grimm</p>
-            
-                        <div class="footer-icons">
-            
-                            <a href="https://www.facebook.com/profile.php?id=100000158137723"><i class="fa fa-facebook"></i></a>
-                            <a href="https://www.instagram.com/brandongr00/"><i class="fa fa-instagram"></i></a>
-                            <a href="https://www.linkedin.com/in/brandon-grimm-bb9778161/"><i class="fa fa-linkedin"></i></a>
-                            <a href="https://github.com/Brandongri15"><i class="fa fa-github"></i></a>
-                           
-
-                        </div>
-            
-                    </div>
-            
-                    <div class="footer-right">
-            
-                        
-            
-                        <form action="mailto:brandon1506@gmail.com" method="post">
-            
-                           
-                            <button>Email Me</button>
-
-                            
-                        </form>
-            
-                    </div>
-            
-                </footer>
-
-        <script>
-            $(".gallery").magnificPopup({
-                delegate: 'a',
-                type: 'image',
-                gallery:{
-                enabled: true
-                }
-            });
-            </script>
+    function stopRotating() {
+      clearInterval(interval)
+    }
+    
+    document.querySelectorAll('.portfolio-item').forEach(function(el) {
+      el.addEventListener('mouseover', function() {
+        el.querySelector('.portfolio-img').style.boxShadow = '0 3px 15px #171515'
+        startRotating(el)
+      })
+      el.addEventListener('mouseout', function() {
+        el.querySelector('.portfolio-img').style.boxShadow = '0 5px 10px #171515'
+        stopRotating()
+      })
+    })
+</script>
 </body>
 </html>
