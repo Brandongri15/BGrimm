@@ -35,6 +35,20 @@ body{
     
 /* identical to box height */
 }
+.link{
+    position: relative;
+    background-color: #ff7315;
+    border-radius: 8px;
+    padding: 20px;
+    stroke: none;
+    border-color: none;
+    font-size: 24px;
+    margin: 0px;
+    text-align: center;
+    right: 5%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
 
 .grey{
     font-family: "Prompt";
