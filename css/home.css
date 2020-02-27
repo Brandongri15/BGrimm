@@ -96,7 +96,7 @@ body{
   background-color: #ff7315;
   border-radius: 8px;
   text-align: center;
-  margin:20px 200px 100px 200px;
+  margin:20px 200px 150px 200px;
 }
 .portfolio-item{
   filter: grayscale(0.6);
@@ -129,9 +129,43 @@ body{
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
-
-
 }
+
+.goals{
+    text-align: center;
+    margin: 20px;
+    margin-top: 40px;
+}
+.cell{
+    width: 50%;
+    float: left;
+    font-size: 24px;
+}
+.title{
+    text-align: center;
+    font-size: 54px;
+    font-family: "Baloo";
+    color: #ff7315;
+}
+.row{
+    clear:both;
+    font-family: "Prompt";
+    list-style: none;
+    text-align: center;
+    color: #ff7315;
+    font-size: 32px;
+    list-style: none;
+    padding: 20px;
+    font-weight: bold;
+}
+.small{
+    color: #a5a3a3;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+
+
 /* Navbar */
 
 .content{
